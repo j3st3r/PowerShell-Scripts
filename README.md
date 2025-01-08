@@ -1,1 +1,4 @@
-These scripts are used to lookup the IoC information fro IP addresses, domains, and hostnames via Alienvault OTX Threat Exchange.
+The following scripts are used to lookup the IoC information via Alienvault OTX Threat Exchange for...
+  IP addresses
+  domain Names
+  Hostnames 
