@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# Script Name: OTX
-# Description: Used to retreive IOC info for Domains from otx.alienvault.com
+# Script Name: domain_otx.py
+# Description: Used to retreive IOC info for Domain Names from otx.alienvault.com
+# Written by Will Armijo
 
 import requests
 import json
