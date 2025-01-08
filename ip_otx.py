@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# Script Name: OTX
+# Script Name: ip_otx.py
 # Description: Used to retreive IOC info for IP Addresses from otx.alienvault.com
 # Written By Will Armijo
-# Version 1
+
 import requests
 import json
 
