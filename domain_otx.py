@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Script Name: domain_otx.py
-# Description: Used to retreive IOC info for Domain Names from otx.alienvault.com
+# Description: Use to retreive possible IoC (Indcator of Compromise) info for Domain Names from otx.alienvault.com API.
 # Written by Will Armijo
 
 import requests
