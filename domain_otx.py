@@ -40,7 +40,17 @@ print("IoC Description: ", descr)
 print("IoC Created on: ", created)
 print("Last Updated", modified)
 print(tags)
+print("")
 
+print("==================")
+print("IoC Details: ")
+print("==================")
+print("")
+for items in pulses:
+    description = items['description']
+    print(description)
+    print("")
+    
 print("===============")
 print("Identified by: ")
 print("===============")
