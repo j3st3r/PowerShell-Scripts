@@ -2,13 +2,12 @@
 # Script Name: ip_otx.py
 # Description: Use to retreive possible IoC (Indicators of Compromise) info for IP Addresses via otx.alienvault.com
 # Written By Will Armijo
+# Created On: 01/11/2025
 
 import requests
 import json
 
-print("")
 print("This script is used to lookup reputational data for an IP Address")
-print("")
 
 ip_addr = input("Please Enter an IP Address: ")
 
@@ -21,8 +20,45 @@ if response.status_code == 200:
     ip_info = response.json()
 
     if ip_info["false_positive"]:
-        print("NOT Malicious")
+        print("False Positive - Not  Malicious")
     else:
-        print(json.dumps(ip_info["pulse_info"], indent=0))
+        pulses = ip_info['pulse_info']['pulses']
+
+
+for items in pulses:
+   name = items['name']
+   descr = items['description']
+   tags = items['tags']
+   created = items['created']
+   modified = items['modified']
+
+# Reporting Section
+print("==================")
+print("IoC Information: ")
+print("==================")
+print("")
+print("IoC Name: ", name)
+print("IoC Description: ", descr)
+print("IoC Created on: ", created)
+print("Last Updated", modified)
+print(tags)
+
+print("==================")
+print("Related IoC Tags: ")
+print("==================")
+print("")
+for items in pulses:
+    tags = items['tags']
+    print(tags)
+    print("")
+
+print("===============")
+print("Identified by: ")
+print("===============")
+print("")
+for items in pulses:
+    source_name = items['name']
+    print(source_name)
+    
 else:
-    print("Request failed with status", {response.status_code})
+    print("Request failed with status", {response.status_code}) # Error Code here
