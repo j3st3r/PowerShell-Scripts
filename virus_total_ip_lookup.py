@@ -5,7 +5,8 @@
 # Created on: 01/11/2025
 
 '''
-Please note that this script is not compliant with security as the API key is statically assigned. This can be updated to retrieve the API key from a file, user input, or environment variable. 
+Please note that this script is not compliant with security as the API key is statically assigned. 
+This can be updated to retrieve the API key from a protected file, user input, or user environment variable. 
 '''
 
 import requests
