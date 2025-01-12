@@ -44,12 +44,12 @@ print("Last Updated", modified)
 print(tags)
 
 print("==================")
-print("Related IoC Tags: ")
+print("IoC Details: ")
 print("==================")
 print("")
 for items in pulses:
-    tags = items['tags']
-    print(tags)
+    description = items['description']
+    print(description)
     print("")
 
 print("===============")
