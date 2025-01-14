@@ -6,8 +6,6 @@
 import requests
 import json
 
-print("This script is used to lookup reputational data for a Domain")
-
 ioc_url = input("Please Enter the Domain name(example: https://www.google.com): ")
 
 url = f"https://otx.alienvault.com/api/v1/indicators/url/{ioc_url}/general"
