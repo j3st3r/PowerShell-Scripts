@@ -80,7 +80,7 @@ while True:
             
     elif choice == 2:
         ip_addr = input("Please Enter an IP Address: ")
-        api_key = "01ec9abc02ecd5e18bd1e554ceef89e98937ca595c7df433a4889c840cf530d3"
+        api_key = "<API KEY HERE>"
         url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip_addr}"
 
         # Set up the headers
