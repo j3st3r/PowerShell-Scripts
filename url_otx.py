@@ -18,6 +18,8 @@ if response.status_code == 200:
 
     if ip_info["false_positive"]:
         print("False Positive - Not  Malicious")
+        exit()
+    
     else:
         pulses = ip_info['pulse_info']['pulses']
 
