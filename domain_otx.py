@@ -24,33 +24,33 @@ if response.status_code == 200:
         pulses = ip_info['pulse_info']['pulses']
 
 
-for items in pulses:
-   name = items['name']
-   descr = items['description']
-   tags = items['tags']
-   created = items['created']
-   modified = items['modified']
+    for items in pulses:
+        name = items['name']
+        descr = items['description']
+        tags = items['tags']
+        created = items['created']
+        modified = items['modified']
+        targt_countries = items['targeted_countries']
+        malware_families = items['malware_families']
+        #refs = items['references']
 
-print("==================")
-print("IoC Information: ")
-print("==================")
-print("")
-print("IoC Name: ", name)
-print("IoC Description: ", descr)
-print("IoC Created on: ", created)
-print("Last Updated", modified)
-print(tags)
-print("")
 
-print("==================")
-print("IoC Details: ")
-print("==================")
-print("")
-for items in pulses:
-    description = items['description']
-    print(description)
+    print("==================")
+    print("IoC Information: ")
+    print("==================")
     print("")
-    
+    print("IoC Name: ", name)
+    print("IoC Description: ", descr)
+    print("IoC Created on: ", created)
+    print("Last Updated", modified)
+    print(tags)
+    print("")
+    print("========================")
+    print("Related Malware Families")
+    print("")
+    for malware in malware_families:
+            print(malware['display_name'])
+
 print("===============")
 print("Identified by: ")
 print("===============")
@@ -59,5 +59,12 @@ for items in pulses:
     source_name = items['name']
     print(source_name)
 
+print("===============")
+print("References: ")
+print("===============")
+print("")
+for items in pulses:
+    refs = items['references']
+    print(refs)
 else:
     print("Request failed with status", {response.status_code})
