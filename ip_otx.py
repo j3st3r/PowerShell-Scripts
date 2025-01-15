@@ -33,6 +33,7 @@ if response.status_code == 200:
         modified = items['modified']
         refs = items['references']
         adversary = items['adversary']
+        trgt_countries = items['targeted_countries']
 
         # Reporting Section
         print("==================")
@@ -46,6 +47,7 @@ if response.status_code == 200:
         print("Last Updated", modified)
         print("Related Tags", tags)
         print("References:", refs)
+        print("Targeted Countries: ", trgt_countries)
         print("")
     print("===============")
     print("Identified by: ")
