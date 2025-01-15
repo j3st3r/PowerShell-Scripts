@@ -32,7 +32,7 @@ if response.status_code == 200:
         modified = items['modified']
         targt_countries = items['targeted_countries']
         malware_families = items['malware_families']
-        #refs = items['references']
+        refs = items['references']
 
 
     print("==================")
@@ -63,8 +63,8 @@ print("===============")
 print("References: ")
 print("===============")
 print("")
-for items in pulses:
-    refs = items['references']
-    print(refs)
+for ref in refs:
+    print(ref)
+
 else:
     print("Request failed with status", {response.status_code})
