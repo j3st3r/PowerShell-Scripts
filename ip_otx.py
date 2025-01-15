@@ -31,6 +31,8 @@ for items in pulses:
    tags = items['tags']
    created = items['created']
    modified = items['modified']
+   refs = items['references']
+   adversary = items['adversary']
 
 # Reporting Section
 print("==================")
@@ -38,10 +40,12 @@ print("IoC Information: ")
 print("==================")
 print("")
 print("IoC Name: ", name)
+print("Adversary: ", adversary)
 print("IoC Description: ", descr)
 print("IoC Created on: ", created)
 print("Last Updated", modified)
 print("Related Tags", tags)
+print("References:", refs)
 print("")
 print("==================")
 print("IoC Details: ")
