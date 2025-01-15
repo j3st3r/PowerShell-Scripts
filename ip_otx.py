@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Script Name: ip_otx.py
-# Description: Use to retreive possible IoC (Indicators of Compromise) info for IP Addresses via otx.alienvault.com
+# Description: Use to retreive detailed possible IoC (Indicators of Compromise) info for IP Addresses via otx.alienvault.com
 # Written By Will Armijo
 # Created On: 01/11/2025
 
