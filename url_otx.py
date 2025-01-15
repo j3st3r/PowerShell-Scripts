@@ -32,24 +32,24 @@ if response.status_code == 200:
         references = items['references']
     
     #print(pulses)
-    print("")
-    print("==================")
-    print("IoC Information: ")
-    print("==================")
-    print("")
-    print("IoC Name: ", name)
-    print("IoC Description: ", descr)
-    print("")
-    print("IoC Created on: ", created)
-    print("Last Updated", modified)
-    print("")
-    print("Targeted Countries")
-    for tgt_cnty in trgtd_countries:
-        print(tgt_cnty)
-    print("")
-    print("References")
-    for refs in references:
-        print(refs)
+        print("")
+        print("==================")
+        print("IoC Information: ")
+        print("==================")
+        print("")
+        print("IoC Name: ", name)
+        print("IoC Description: ", descr)
+        print("")
+        print("IoC Created on: ", created)
+        print("Last Updated:", modified)
+        print("")
+        print("Targeted Countries:")
+        for countries in trgtd_countries:
+            print(countries)
+        print("")
+        print("References:")
+        for refs in references:
+            print(refs)
 
 else:
     print("Request failed with status", {response.status_code})
