@@ -47,15 +47,6 @@ if response.status_code == 200:
         print("Related Tags", tags)
         print("References:", refs)
         print("")
-        print("==================")
-        print("IoC Details: ")
-        print("==================")
-        print("")
-    for items in pulses:
-        description = items['description']
-        print(description)
-        print("")
-
     print("===============")
     print("Identified by: ")
     print("===============")
