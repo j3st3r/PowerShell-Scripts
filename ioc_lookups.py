@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Script Name: ioc_lookups.py
+
 import json
 import os
 import pandas as pd
@@ -44,43 +44,29 @@ while True:
             modified = items['modified']
             refs = items['references']
             adversary = items['adversary']
+            affected_ind = items['industries']
 
         # Reporting Section
-        print("==================")
-        print(" IoC Information: ")
-        print("==================")
-        print("")
-        print("IoC Name: ", name)
-        print("Adversary: ", adversary)
-        print("IoC Description: ", descr)
-        print("IoC Created on: ", created)
-        print("Last Updated", modified)
-        print("Related Tags", tags)
-        print("References:", refs)
-        print("")
-
-        print("==================")
-        print(" IoC Details: ")
-        print("==================")
-        print("")
-        for items in pulses:
-            description = items['description']
-            print(description)
+            print("==================")
+            print(" IoC Information: ")
+            print("==================")
             print("")
-
-        print("===============")
-        print(" Identified by: ")
-        print("===============")
-        print("")
-        for items in pulses:
-            source_name = items['name']
-            print(source_name)
+            print("IoC Name: ", name)
+            print("Adversary: ", adversary)
+            print("IoC Description: ", descr)
+            print("IoC Created on: ", created)
+            print("Last Updated", modified)
+            print("Related Tags", tags)
+            print("References:", refs)
+            print("Affected Industries: ", affected_ind)
+            print("")
+        
         else:
             print("Request failed with status", {response.status_code}) # Error Code here
             
     elif choice == 2:
         ip_addr = input("Please Enter an IP Address: ")
-        api_key = "<Virus Total API KEY HERE>"
+        api_key = "<Enrter your own Virus Total API Key here, or you can use a protected file using read file code>"
         url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip_addr}"
 
         # Set up the headers
