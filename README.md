@@ -6,11 +6,11 @@ Usage: ./domain_otx.py
 
 ================================================================================================================================================
 
-Script Name: ioc_lookups.py
+Script Name: file_sha1_lookup.py
 
-Purpose: Master Script containing all of the inndividual scripts in this repository and presented as a menu to the user. 
+Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking file hashes via AlienVaults’ OTX Threat Exchange.
 
-Usage: ./ioc_lookups.py
+Usage: ./domain_otx.py
 
 ================================================================================================================================================
 
