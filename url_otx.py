@@ -6,9 +6,11 @@
 import requests
 import json
 
-print("This script is used to lookup reputational data for a Domain")
+print("=========================================================")
+print("This script is used to lookup reputational data for a URL")
+print("=========================================================")
 
-url = input("Please Enter a Domain name: ")
+url = input("Please Enter a URL: ")
 
 gen_url = f"https://otx.alienvault.com/api/v1/indicators/url/{url}/general"
 urls_url = f"https://otx.alienvault.com/api/v1/indicators/url/{url}/url_list"
