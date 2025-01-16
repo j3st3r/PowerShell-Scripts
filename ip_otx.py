@@ -64,13 +64,13 @@ if gen_response.status_code == 200:
         print("Adversary: ", adversary)
         print("IoC Description: ", descr)
         print("IoC Created on: ", created)
-        print("Last Updated", modified)
+        print("Last Updated: ", modified)
         print("")
         print("Related Tags: ")
         for tag in tags:
             print("\t", tag)
         print("")
-        print("References:")
+        print("References: ")
         for ref in refs:
             print("\t", ref)
         print("")
