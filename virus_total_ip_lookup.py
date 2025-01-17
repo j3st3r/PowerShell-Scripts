@@ -56,6 +56,7 @@ if response.status_code == 200:
     print("Found to be Suspicious ", ioc_results['suspicious'], "times")
     print("Found to be Undetected ", ioc_results['undetected'], "times")
     print("Found to be Harmless ", ioc_results['harmless'], "times")
+    print("")
 
 else:
     print("Request failed with status", {response.status_code}, {response.text})
