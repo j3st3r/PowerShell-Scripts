@@ -16,9 +16,9 @@ import pandas as pd
 from pandas import json_normalize
 
 # Use one of the following hashes to test script with. These are known bad files hashes.
-#hash = "33edac8a75cac4a0a1d084174b3dc912b9744386"
-#hash = "7e328600053285468f4dd7c302cdc00d3a75ae89"
-#hash = "39f9157e24fa47c400d4047c1f6d9b4dbfd067288cfe5f5c0cc2e8449548a6e8"
+#hash = "33edac8a75cac4a0a1d084174b3dc912b9744386" # SHA-1
+#hash = "720eea739bd033b804b98c0190b06d864dd61053aab14cb19d1c56d390686313" #SHA-256
+#hash = "beb1de229b374cd778107c8268e191ac" # MD5
 
 # Comment the 'hash' variable out if you choose one of the hashes above.
 hash = input("Please enter a file hash: ")
@@ -44,17 +44,13 @@ if response.status_code == 200:
     ioc_total = df['data']
     
     print("")
-    #print(ioc_total['attributes'])
     print("")
     print("============================")
     print("")
-    #print(ioc_total['attributes']['popular_threat_classification'])
     print("Detected as: ", ioc_total['attributes']['popular_threat_classification']['suggested_threat_label'])
     print("============================")
     print("")
-    
     ioc_analysis = ioc_total['attributes']['last_analysis_stats']
-    #print(ioc_analysis)
     print("Number of Antivirus to find file hash...") 
     print("\tMalicious:", ioc_analysis['malicious'])
     print("\tSuspicious:", ioc_analysis['suspicious'])
