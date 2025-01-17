@@ -33,6 +33,7 @@ if response.status_code == 200:
     df = pd.read_json(vt_data)
 
     ioc_total = df['data']
+    ioc_country = ioc_total['attributes']['country']
     ioc_ip = df['data']['id']
     ioc_atrb = df['data']['attributes']
     network = ioc_atrb['network']
@@ -46,6 +47,7 @@ if response.status_code == 200:
     print("")
     print("Target IP: ", ioc_ip)
     print("Target Network", network)
+    print("IoC Country: ", ioc_country)
     print("")
     print("=====================================")
     print("Antimalware Scan Engines IoC Results")
