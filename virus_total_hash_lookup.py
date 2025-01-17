@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Script Name: virus_total_hash_lookup.py
 # Purpose: Use to lookup Virus Total Stats for any file hash.
+# Accepted Hashes, SHA-1, SHA-256, and MD5
 # Written By: Will Armijo
 # Created on: 01/11/2025
 
@@ -20,7 +21,7 @@ from pandas import json_normalize
 #hash = "39f9157e24fa47c400d4047c1f6d9b4dbfd067288cfe5f5c0cc2e8449548a6e8"
 
 # Comment the 'hash' variable out if you choose one of the hashes above.
-hash = input("Please enter a SHA-1 file hash: ")
+hash = input("Please enter a file hash: ")
 api_key = "<Replace this with your own API key from Virus Total>"
 url = f"https://www.virustotal.com/api/v3/files/{hash}"
 
