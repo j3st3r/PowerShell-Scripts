@@ -3,7 +3,7 @@
 # Purpose: This script can be used to lookup the SHA-1 against Threat Exchange data in otx.alienvault.com
 # Written By: Will Armijo
 # Created on: 1/16/2025
-# Please note, in order to use this script you will need to uncomment one fo the input code blocks first.
+# Please note, in order to use this script you will need to uncomment one of the following input code blocks first. Each one serves a different purpose. 
 
 import requests
 import json
