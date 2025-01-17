@@ -48,6 +48,10 @@ if response.status_code == 200:
     print("Target IP: ", ioc_ip)
     print("Target Network", network)
     print("IoC Country: ", ioc_country)
+    print("Continent: ", ioc_atrb['continent'])
+    print("Associated Tags: ")
+    for tag in ioc_atrb['tags']:
+    print("\t", tag)
     print("")
     print("=====================================")
     print("Antimalware Scan Engines IoC Results: ")
