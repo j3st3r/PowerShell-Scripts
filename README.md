@@ -30,6 +30,14 @@ Usage: ./virus_total_ip_lookup.py
 
 ================================================================================================================================================
 
+Script Name: virus_total_hash_lookup.py
+
+Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking file via Virus Total. This sscript uses the hash (sha-1, sha-256, and md5) to look up possible IoC info.
+
+Usage: ./virus_total_hash_lookup.py
+
+================================================================================================================================================
+
 Script Name: url_otx.py
 
 Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking URL via AlienVaults’ OTX Threat Exchange.
