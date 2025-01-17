@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Script Name: virus_total_hash_lookup.py
-# Purpose: Use to lookup Virus Total Stats for a SHA-1 file hash.
+# Purpose: Use to lookup Virus Total Stats for any file hash.
 # Written By: Will Armijo
 # Created on: 01/11/2025
 
@@ -15,8 +15,9 @@ import pandas as pd
 from pandas import json_normalize
 
 # Use one of the following hashes to test script with. These are known bad files hashes.
-#hash = ("33edac8a75cac4a0a1d084174b3dc912b9744386")
-#hash = ("7e328600053285468f4dd7c302cdc00d3a75ae89")
+#hash = "33edac8a75cac4a0a1d084174b3dc912b9744386"
+#hash = "7e328600053285468f4dd7c302cdc00d3a75ae89"
+#hash = "39f9157e24fa47c400d4047c1f6d9b4dbfd067288cfe5f5c0cc2e8449548a6e8"
 
 # Comment the 'hash' variable out if you choose one of the hashes above.
 hash = input("Please enter a SHA-1 file hash: ")
