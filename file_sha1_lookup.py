@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Script Name: file_sha1_lookup.py
-# Purpose: This script can be used to lookup the SHA-1 against Threat Exchange data in otx.alienvault.com
+# Purpose: This script can be used to lookup SHA-1, SHA-256, and MD5 file hashes against Threat Exchange data in otx.alienvault.com
 # Written By: Will Armijo
 # Created on: 1/16/2025
 # Please note, in order to use this script you will need to uncomment one of the following input code blocks first. Each one serves a different purpose. 
@@ -11,7 +11,7 @@ import hashlib
 import os
 
 # Uncomment this block of code to enable user to enter file path. Rememeber 
-# to uncomment the else print statements at the very bottom too.
+# to uncomment the 'else' code at the very bottom too.
 ########################################################################
 #file_path = input("Enter full file path(ex. /home/user/file): ")
 #if os.path.exists(file_path):
