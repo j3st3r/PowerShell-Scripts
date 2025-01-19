@@ -12,6 +12,10 @@ Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspi
 
 Usage: ./domain_otx.py
 
+Required Modules:
+  + requests
+  + json
+
 ================================================================================================================================================
 
 Script Name: ip_otx.py
@@ -19,6 +23,23 @@ Script Name: ip_otx.py
 Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking IP Address via AlienVaults’ OTX Threat Exchange.
 
 Usage: ./ip_otx.py
+
+Required Modules:
+  + requests
+  + json
+    
+================================================================================================================================================
+
+Script Name: url_otx.py
+
+Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking URL via AlienVaults’ OTX Threat Exchange.
+
+Usage: ./url_otx.py
+
+Required Modules:
+  + requests
+  + json
+
 
 ================================================================================================================================================
 
@@ -28,6 +49,11 @@ Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspi
 
 Usage: ./virus_total_ip_lookup.py
 
+Requried Modules:
+  + request
+  + json
+  + pandas
+
 ================================================================================================================================================
 
 Script Name: virus_total_hash_lookup.py
@@ -36,10 +62,9 @@ Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspi
 
 Usage: ./virus_total_hash_lookup.py
 
+Requried Modules:
+  + request
+  + json
+  + pandas
+
 ================================================================================================================================================
-
-Script Name: url_otx.py
-
-Purpose: Use this script to lookup the IoC (Indicator of Compromise) for a suspicious looking URL via AlienVaults’ OTX Threat Exchange.
-
-Usage: ./url_otx.py
