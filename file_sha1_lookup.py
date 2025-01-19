@@ -36,12 +36,7 @@ if response.status_code == 200:
     
     hash_details = hash_info
     pulses = hash_details['pulse_info']['pulses']
-    
-    #print("=================================================")
-    #print(pulses)
-    #print("=================================================")
-    #print("")
-    #print("")
+
     for items in pulses:
         name = items['name']
         ids = items['attack_ids']
