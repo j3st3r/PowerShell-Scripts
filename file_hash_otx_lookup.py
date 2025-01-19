@@ -34,8 +34,7 @@ response = requests.get(analysis_url)
 if response.status_code == 200:
     hash_info = response.json()
     
-    hash_details = hash_info
-    pulses = hash_details['pulse_info']['pulses']
+    pulses = hash_info['pulse_info']['pulses']
 
     for items in pulses:
         name = items['name']
@@ -58,8 +57,12 @@ if response.status_code == 200:
         print("IoC Description: ", descr)
         print("IoC Created on: ", created)
         print("Last Updated", modified)
-        print("Related Tags", tags)
+        print("")
+        print("Related Tags:")
+        for tag in tags:
+            print("\t", tag)
         print("References:")
+        print("")
         for ref in refs:
             print(ref)
         print("")
