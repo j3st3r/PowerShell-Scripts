@@ -20,9 +20,9 @@ Required Modules:
 
 ==========================================================================================================
 
-Script Name: file_sha1_lookup.py
+Script Name: file_hash_lookup.py
 
-Purpose: Use this script to lookup the IoC (Indicator of Compromise) details for a suspicious looking file hashes via AlienVaults’ OTX Threat Exchange.
+Purpose: Use this script to lookup the IoC (Indicator of Compromise) details for a suspicious looking file hashes (SHA1, SHA256, AND MD5) via AlienVaults’ OTX Threat Exchange.
 
 Usage: ./domain_otx.py
 
