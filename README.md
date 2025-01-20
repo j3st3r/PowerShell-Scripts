@@ -2,7 +2,7 @@ Script Name: IOC_Lookup_IP.ps1
 
 Purpose: Use this script to obtain any IoC (Indicator of Compromise) details for a suspicious looking IP Address via AlienVaults’ OTX Threat Exchange.
 
-Usage: ./ip_otx.py
+Usage: ./IOC_Lookup_IP.ps1
 
 Requires PowerShell
 
