@@ -14,6 +14,10 @@ Purpose: Use this script to lookup the IoC (Indicator of Compromise) details for
 
 Usage: ./domain_otx.py
 
+Required Modules:
+  + requests
+  + json
+
 ==========================================================================================================
 
 Script Name: file_sha1_lookup.py
