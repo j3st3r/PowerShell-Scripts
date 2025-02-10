@@ -1,1 +1,1 @@
-Place for Indicator of Compromise related scripts
+Repository for Indicator of Compromise related PowerShell scripts
