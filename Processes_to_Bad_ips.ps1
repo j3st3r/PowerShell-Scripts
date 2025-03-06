@@ -1,5 +1,6 @@
 # Script Name: Processes_to_Bad_ips.ps1
-# Purpose: Map what process is talking with suspicious IP adresses
+# Purpose: Map what process is talking with suspicious IP adresses according to otx.alienvault.com
+# Please note, this must be ran with elevated privileges.
 
 
 $Processes = @{}
