@@ -13,9 +13,9 @@ Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, Stat
 @{Name="ProcessName";Expression={$Processes[[int]$_.OwningProcess].ProcessName}},
 @{Name="UserName";Expression={$Processes[[int]$_.OwningProcess].UserName}}
 Write-Host ""
-Write-Host "======================== Conneciton Details ================================================="
-Write-Host "`tProcess `tRemoteHostname `tRemote IP `tRemote Port `tReported `tStatus `t# of malware files"
-Write-Host "---------------------------------------------------------------------------------------------"
+Write-Host "============================================ Established Connecitons Details ========================"
+Write-Host "`tStatus `t`tProcess Name `t`tRemote IP `t`tRemote Port `tReported `t# of malware files"
+Write-Host "-----------------------------------------------------------------------------------------------------"
 
 foreach($line in $listing){
     
@@ -36,28 +36,27 @@ foreach($line in $listing){
             $reputation = $response.reputation
             $malware = $malware__response.count
 
-
             if($pulse_count -eq 0) {
             $KNownGood_cnt++
-            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
-            #Write-Host "`t$proc_name `t[$remote_ip] `t$remote_port `t$pulse_count `tKnown Good `t0"
+            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName 
+            Write-Host "`tKnown Good `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
                                                  
     } elseif($pulse_count -eq 1 ) {
             $Stale_ioc_cnt++
-            $hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
-            Write-Host "`t$proc_name `t$hostname `t[$remote_ip] `t$remote_port `t$pulse_count `tfurther investigation required  `t$malware"
+            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
+            Write-Host "`tfurther investigation required `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
             
     }elseif($pulse_count -gt 1) { 
             $suspicious_cnt++
-            $hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
-            Write-Host "`t$proc_name `t$hostname `t[$remote_ip] `t$remote_port `t$pulse_count `tSuspicious `t$malware"
- 
-    
+            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
+            Write-Host "`tSuspicious `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
+     
     }
      
   }
 
 }
+
 
 Write-Host ""
 Write-Host "======================== Metrics ========================"
