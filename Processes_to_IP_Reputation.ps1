@@ -2,12 +2,6 @@
 # Purpose: Map what process is talking with suspicious IP adresses according to otx.alienvault.com
 # Please note, this must be ran with elevated privileges.
 
-
-$Processes = @{}
-Get-Process -IncludeUserName | ForEach-Object {
-    $Processes[$_.Id] = $_
-}
-
 $listing = Get-NetTCPConnection | 
 Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, State, OwningProcess, 
 @{Name="ProcessName";Expression={$Processes[[int]$_.OwningProcess].ProcessName}},
@@ -38,17 +32,14 @@ foreach($line in $listing){
 
             if($pulse_count -eq 0) {
             $KNownGood_cnt++
-            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName 
             Write-Host "`tKnown Good `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
                                                  
     } elseif($pulse_count -eq 1 ) {
             $Stale_ioc_cnt++
-            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
             Write-Host "`tfurther investigation required `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
             
     }elseif($pulse_count -gt 1) { 
             $suspicious_cnt++
-            #$hostname = [System.Net.Dns]::GetHostEntry($remote_ip).HostName
             Write-Host "`tSuspicious `t$proc_name `t`t[$remote_ip] `t`t$remote_port `t$pulse_count `t$malware"
      
     }
