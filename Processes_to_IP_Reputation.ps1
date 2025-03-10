@@ -27,7 +27,7 @@ foreach($line in $listing){
         if($states -match "Established" -and $remote_ip -notmatch '127.0.0.1'){
     
             $gen_url = "https://otx.alienvault.com/api/v1/indicators/IPv4/$remote_ip/general"
-            $malware_url = "https://otx.alienvault.com/api/v1/indicators/IPv4/$ip_add/malware" 
+            $malware_url = "https://otx.alienvault.com/api/v1/indicators/IPv4/$remote_ip/malware" 
             
             $response = Invoke-RestMethod -Method GET -Uri $gen_url
             $malware__response = Invoke-RestMethod -Method GET -Uri $malware_url
